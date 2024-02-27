@@ -1,3 +1,4 @@
+/*
 //Practice 3.1
 let shoppingList = ["Milk", "Bread", "Apples"];
 console.log(shoppingList.length);
@@ -21,6 +22,7 @@ let combinedLists = shoppingList.concat(newList, newList);
 console.log(combinedLists);
 let popLastIndex = combinedLists.lastIndexOf("Pop");
 console.log(popLastIndex);
+*/
 
 //Chapter Project
 //manipulating an array
