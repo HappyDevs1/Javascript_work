@@ -1,4 +1,3 @@
-/*
 //Chapter Projects
 //evaluating a number game
 let userNum = prompt("Please enter a number");
@@ -15,7 +14,6 @@ if (userNum > dynamicNum) {
 } else {
   alert("Please pick a number")
 };
-*/
 
 //friend checker
 let name = prompt("Please enter your name").toLowerCase();
