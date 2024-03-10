@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="page"></p>
+    <script>
+      let q = window.location.search;
+      let params = new URLSearchParams(q);
+      let fname = params.get("firstName");
+      let lname = params.get("lastName");
+      let age = params.get("age");
+      document.getElementById("page").innerHTML = fname + " " + lname;
+      console.log(name);
+    </script>
+  </body>
+</html>

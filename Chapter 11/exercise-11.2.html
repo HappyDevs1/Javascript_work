@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Content an Event Listeners</title>
+  <style></style>
+</head>
+<body>
+  <h1>Changing the color</h1>
+  <div class="blue">blue</div>
+  <div>red</div>
+  <div>yellow</div>
+  <div>black</div>
+  <div>green</div>
+  <script>
+    const divs = document.querySelectorAll("div");
+        divs.forEach((el)=>{
+            el.addEventListener("click",()=>{
+                document.body.style.backgroundColor = el.textContent;
+            });
+        });
+  </script>
+</body>
+</html>
