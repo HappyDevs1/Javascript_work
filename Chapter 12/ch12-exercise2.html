@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Course</title>
+  </head>
+
+  <body>
+    <div class="output"></div>
+    <input type="text" placeholder="Enter Email" />
+    <button>Check</button>
+    <script>
+      const input = document.querySelector("input");
+      const output = document.querySelector(".output");
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", checkEmail);
+
+      function checkEmail() {
+        let emailPattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}/g;
+        let emailInput = input.value;
+
+        if (emailInput.match(emailPattern)) {
+          output.textContent = "Correct Email";
+          output.style.color = "Green";
+        } else {
+          output.textContent = "Invalid Email";
+          output.style.color = "Red";
+        }
+      };
+    </script>
+  </body>
+</html>
