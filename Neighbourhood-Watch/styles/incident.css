@@ -52,11 +52,83 @@ body {
 #main {
   transition: margin-left .5s;
   padding: 16px;
+}
+.header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .title {
   font-weight: bold;
-  font-size: 3vw;
+  font-size: clamp(21px, 3vw, 45px);
   margin-left: 10%;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+.profile-picture {
+
+}
+.user-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.profile-name {
+  font-size: clamp(10px, 1vw, 15px);
+}
+
+.incident-form {
+  margin: 6%;
+  margin: 10%;
+  padding: 2% 3%;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.12);
+  border-radius: 5px;
+}
+.incident-title {
+  font-weight: bold;
+  font-size: clamp(20px, 2.2vw, 28px);
+}
+.pair {
+
+}
+.form-info {
+  font-size: 14px;
+  margin-bottom: 1%;
+  margin-top: 1.5%;
+}
+.short-input {
+  height: 2vw;
+  width: 80%;
+  border: none;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.12);
+}
+.long-input {
+  height: 5vw;
+  width: 80%;
+  border: none;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.12);
+}
+.incident-button {
+  margin-top: 3%;
+  padding: 1.5% 2.5%;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  font-weight: bold;
+}
+.incident-button:hover {
+  background-color: rgba(0, 132, 255, 0.664);
+  cursor: pointer;
+}
+.incident-button:active {
+  background-color: rgb(0, 132, 255);
 }
