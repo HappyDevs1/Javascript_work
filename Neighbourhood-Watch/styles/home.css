@@ -88,3 +88,27 @@ body {
 .profile-name {
   font-size: clamp(10px, 1vw, 15px);
 }
+.home-container {
+  display: flex;
+  gap: 10%;
+  align-items: center;
+}
+.left-container {
+  margin-top: 10%;
+  margin-left: 5%;
+}
+.home-title {
+  font-weight: bold;
+  font-size: clamp(20px, 5vw, 60px);
+}
+.home-slogan {
+  font-weight: bold;
+  font-size: clamp(17px, 1vw, 20px);
+  line-height: 140%;
+}
+.right-container {
+  margin-top: 10%;
+}
+.holding-phone-pic {
+  height: 20vw;
+}
