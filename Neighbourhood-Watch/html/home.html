@@ -24,10 +24,34 @@
       <div class="profile-picture">
         <img class="user-picture" src="../images/profile-picture.jpg" alt="profile-picture">
       </div>
-      <div class="profile-name">Happy Mahlangu</div>
+      <div id="username-display" class="profile-name">Happy Mahlangu</div>
     </div>
   </div>
   <hr>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">My Profile</div>
+      <div class="leftside-container">
+        <img class="modal-picture" src="../images/profile-picture.jpg">
+      </div>
+      <div class="rightside-container">
+        <div class="pair">
+          <div class="input">Name</div>
+        <input id="username-input" class="username-input" type="text">
+        </div>
+        <div class="pair">
+          <div>Email</div>
+          <input class="input" type="text">
+        </div>
+        <div class="pair">
+          <div>Phone number</div>
+          <input type="text">
+        </div>
+      </div>
+      <button id="close-modal-btn">Close</button>
+      <button id="save-changes-btn">Save</button>
+    </div>
+  </div>
 
   <div class="home-container">
     <div class="left-container">
@@ -43,8 +67,5 @@
 
   </div>
   <script src="../scripts/home.js"></script>
-  <script src="../scripts/community.js"></script>
-  <script src="../scripts/incident.js"></script>
-  <script src="../scripts/resources.js"></script>
 </body>
 </html>

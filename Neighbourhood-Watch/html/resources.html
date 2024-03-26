@@ -1,55 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources</title>
-  <link rel="stylesheet" href="../styles/resources.css">
-</head>
-<body>
-  <div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="../html/home.html">Home</a>
-    <a href="../html/incident.html">Incident Reporting</a>
-    <a href="../html/resources.html">Safety Resources</a>
-    <a href="../html/community.html">Community forum</a>
-  </div>
-  
-  <div id="main">
-    <div class="header">
-    <button class="openbtn" onclick="openNav()">☰</button>
-    <div class="title">The Neighbourhood Watch</div>
-    <div id="profile" class="profile-container">
-      <div class="profile-picture">
-        <img class="user-picture" src="../images/profile-picture.jpg" alt="profile-picture">
-      </div>
-      <div class="profile-name">Happy Mahlangu</div>
-    </div>
-  </div>
-  <hr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources</title>
+    <link rel="stylesheet" href="../styles/resources.css" />
+  </head>
 
-  <div class="resources-title">Safety Resources</div>
-    <div class="top-container">
-      <div class="top-title">Useful Links</div>
-      <ul>
-        <li class="link">Emergency Contact Numbers</li>
-        <li class="link">Local Police Station</li>
-        <li class="link">Neighbourhood Watch Program</li>
-        <li class="link">Crime Prevention Tips</li>
-        <li class="link">Home Security Checklist</li>
-      </ul>
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="../html/home.html">Home</a>
+      <a href="../html/incident.html">Incident Reporting</a>
+      <a href="../html/resources.html">Safety Resources</a>
+      <a href="../html/community.html">Community forum</a>
     </div>
-    <div class="bottom-container">
-      <div class="bottom-title">Educational Material</div>
-      <ul>
-        <li class="link">Personal Safety Guides</li>
-        <li class="link">Property Marking Advice</li>
-        <li class="link">Neighbourhood Watch Signs</li>
-        <li class="link">Reporting Suspicious Activity</li>
-      </ul>
+
+    <div id="main">
+      <div class="header">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <div class="title">The Neighbourhood Watch</div>
+        <div id="profile" class="profile-container">
+          <div class="profile-picture">
+            <img
+              class="user-picture"
+              src="../images/profile-picture.jpg"
+              alt="profile-picture"
+            />
+          </div>
+          <div class="profile-name">Happy Mahlangu</div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="resources-title">Safety Resources</div>
+      <div class="top-container">
+        <div class="top-title">Useful Links</div>
+        <ul>
+          <li id="emergency-contact" class="link">Emergency Contact Numbers</li>
+          <li class="link">Local Police Station</li>
+          <li class="link">Neighbourhood Watch Program</li>
+          <li class="link">Crime Prevention Tips</li>
+          <li class="link">Home Security Checklist</li>
+        </ul>
+      </div>
+      <div class="bottom-container">
+        <div class="bottom-title">Educational Material</div>
+        <ul>
+          <li class="link">Personal Safety Guides</li>
+          <li class="link">Property Marking Advice</li>
+          <li class="link">Neighbourhood Watch Signs</li>
+          <li class="link">Reporting Suspicious Activity</li>
+        </ul>
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <p>Some text in the Modal..</p>
+          <button id="closeBtn">Close</button>
+        </div>
+      </div>
+
     </div>
-  
-</div>
-  <script src="../scripts/home.js"></script>
-</body>
+    <script src="../scripts/home.js"></script>
+  </body>
 </html>
