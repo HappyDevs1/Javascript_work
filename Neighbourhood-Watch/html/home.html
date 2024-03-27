@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="../styles/home.css">
 </head>
+
 <body>
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -15,57 +17,60 @@
     <a href="../html/community.html">Community forum</a>
     <a href="#">About</a>
   </div>
-  
+
   <div id="main">
     <div class="header">
-    <button class="openbtn" onclick="openNav()">☰</button>
-    <div class="title">The Neighbourhood Watch</div>
-    <div id="profile" class="profile-container">
-      <div class="profile-picture">
-        <img class="user-picture" src="../images/profile-picture.jpg" alt="profile-picture">
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <div class="title">The Neighbourhood Watch</div>
+      <div id="profile" class="profile-container">
+        <div class="profile-picture">
+          <img class="user-picture" src="../images/profile-picture.jpg" alt="profile-picture">
+        </div>
+        <div id="username-display" class="profile-name">Happy Mahlangu</div>
       </div>
-      <div id="username-display" class="profile-name">Happy Mahlangu</div>
     </div>
-  </div>
-  <hr>
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <div class="modal-title">My Profile</div>
-      <div class="leftside-container">
-        <img class="modal-picture" src="../images/profile-picture.jpg">
+    <hr>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-title">My Profile</div>
+        <div class="leftside-container">
+          <img class="modal-picture" src="../images/profile-picture.jpg">
+        </div>
+        <div class="rightside-container">
+          <div class="pair">
+            <div class="input">Name</div>
+            <input id="username-input" class="username-input" type="text">
+          </div>
+          <div class="pair">
+            <div>Email</div>
+            <input class="input" type="text">
+          </div>
+          <div class="pair">
+            <div>Phone number</div>
+            <input type="text">
+          </div>
+        </div>
+        <button id="close-modal-btn">Close</button>
+        <button id="save-changes-btn">Save</button>
       </div>
-      <div class="rightside-container">
-        <div class="pair">
-          <div class="input">Name</div>
-        <input id="username-input" class="username-input" type="text">
-        </div>
-        <div class="pair">
-          <div>Email</div>
-          <input class="input" type="text">
-        </div>
-        <div class="pair">
-          <div>Phone number</div>
-          <input type="text">
-        </div>
-      </div>
-      <button id="close-modal-btn">Close</button>
-      <button id="save-changes-btn">Save</button>
     </div>
-  </div>
 
-  <div class="home-container">
-    <div class="left-container">
-      <div class="home-title">Be proud to be a <br> Neighbourhood Watch</div>
-      <div class="home-slogan">One stop place for security, where citizens take <br> responsibility to curb crime or law break</div>
-      <div></div>
+    <div class="home-container">
+      <div class="left-container">
+        <div class="home-title">Be proud to be a <br> Neighbourhood Watch</div>
+        <div class="home-slogan">One stop place for security, where citizens take <br> responsibility to curb crime or
+          law break</div>
+        <div></div>
+      </div>
+      <div class="right-container">
+        <img class="holding-phone-pic" src="../images/home-picture.jpg">
+      </div>
     </div>
-    <div class="right-container">
-      <img class="holding-phone-pic" src="../images/home-picture.jpg">
-    </div>
-  </div>
 
+    
 
   </div>
   <script src="../scripts/home.js"></script>
 </body>
+
 </html>

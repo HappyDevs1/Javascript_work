@@ -132,3 +132,23 @@ body {
 .incident-button:active {
   background-color: rgb(0, 132, 255);
 }
+.incident-container {
+  line-height: 140%;
+}
+.recently-incident-title {
+  font-weight: bold;
+  color: rgb(0, 119, 255);
+  font-size: clamp(17px, 2vw, 25px);
+}
+.incident-details {
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  margin-top: 2%;
+}
+.incident-by-text {
+  color: gray;
+}
+.reporter-username {
+  color: rgb(0, 110, 255);
+}

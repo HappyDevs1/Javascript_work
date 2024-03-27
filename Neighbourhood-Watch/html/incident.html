@@ -17,44 +17,60 @@
   
   <div id="main">
     <div class="header">
-    <button class="openbtn" onclick="openNav()">☰</button>
-    <div class="title">The Neighbourhood Watch</div>
-    <div id="profile" class="profile-container">
-      <div class="profile-picture">
-        <img class="user-picture" src="../images/profile-picture.jpg" alt="profile-picture">
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <div class="title">The Neighbourhood Watch</div>
+      <div id="profile" class="profile-container">
+        <div class="profile-picture">
+          <img class="user-picture" src="../images/profile-picture.jpg" alt="profile-picture">
+        </div>
+        <div id="username-display" class="profile-name">Happy Mahlangu</div>
       </div>
-      <div class="profile-name">Happy Mahlangu</div>
     </div>
-  </div>
-  <hr>
-  
+    <hr>
+
   <div class="incident-form">
     <div class="incident-title">Report an Incident</div>
     <div class="pair">
       <div class="form-info">Incident Type:</div>
-      <input class="short-input" type="text">
+      <input id="incident-type-input" class="short-input" type="text">
     </div>
     <div class="pair">
       <div class="form-info">Description:</div>
-      <input class="long-input" type="text" placeholder="Provide a detailed description of the incident">
+      <input  id="description-input" class="long-input" type="text" placeholder="Provide a detailed description of the incident">
     </div>
     <div class="pair">
       <div class="form-info">Location</div>
-      <input class="short-input" type="text" placeholder="Where did the incident occur">
+      <input  id="location-input" class="short-input" type="text" placeholder="Where did the incident occur">
     </div>
     <div class="pair">
       <div class="form-info">Date:</div>
-      <input class="short-input" type="date">
+      <input  id="date-input" class="short-input" type="date">
     </div>
     <div class="pair">
       <div class="form-info">Upload image:</div>
-      <input type="file">
+      <input  id="image-input" type="file">
     </div>
     <button id="incident-btn" class="incident-button">Report Incident</button>
-
+    <div id="confirmation-message"></div>
   </div>
 
+  <div class="incident-container">
+    <div class="recently-incident-title">Recently Reported Incident</div>
+    <div class="incident-details">
+      <div class="incident-by-text">Reported by</div>
+      <div class="reporter-username">Jeff Peterson</div>
+      <div class="incident-time">2024-03-27</div>
+    </div>
+    <div>Incident type: House robbery</div>
+    <div class="location-text">Location: In my house</div>
+    <div class="incident-description">Description: There is a black van with tinted windows that keep on driving around the neighbourhood. <br> These people enter in your house in the pretence of being the mantainance crew then <br> when you open the door they do robbery.
+    </div>
+    <div class="incident-image"></div>
   </div>
-  <script src="../scripts/home.js"></script>
+  <hr>
+  <div id="incident-container" class="confirmation"></div>
+
+  </div>
+  <script src="../scripts/incident.js"></script>
 </body>
 </html>

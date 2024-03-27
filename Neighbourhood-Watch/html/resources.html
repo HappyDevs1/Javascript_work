@@ -38,30 +38,102 @@
         <div class="top-title">Useful Links</div>
         <ul>
           <li id="emergency-contact" class="link">Emergency Contact Numbers</li>
-          <li class="link">Local Police Station</li>
-          <li class="link">Neighbourhood Watch Program</li>
-          <li class="link">Crime Prevention Tips</li>
-          <li class="link">Home Security Checklist</li>
+          <li id="local-police" class="link">Local Police Station</li>
+          <li id="neighbourhood-watch" class="link">Neighbourhood Watch Program</li>
+          <li id="crime-prevention" class="link">Crime Prevention Tips</li>
+          <li id="home-security-checklist" class="link">Home Security Checklist</li>
         </ul>
       </div>
       <div class="bottom-container">
         <div class="bottom-title">Educational Material</div>
         <ul>
-          <li class="link">Personal Safety Guides</li>
-          <li class="link">Property Marking Advice</li>
-          <li class="link">Neighbourhood Watch Signs</li>
-          <li class="link">Reporting Suspicious Activity</li>
+          <li id="personal-safety" class="link">Personal Safety Guides</li>
+          <li id="property-marking" class="link">Property Marking Advice</li>
+          <li id="neighbourhood-watch-signs" class="link">Neighbourhood Watch Signs</li>
+          <li id="incident-reporting" class="link">Reporting Suspicious Activity</li>
         </ul>
       </div>
 
-      <div id="myModal" class="modal">
+      <div id="emergencyContactModal" class="modal">
         <div class="modal-content">
-          <p>Some text in the Modal..</p>
-          <button id="closeBtn">Close</button>
+          <span class="close">&times;</span>
+          <h2>Emergency Contact Numbers</h2>
+          <ul>
+            <li>Police: 911</li>
+            <li>Fire Department: 911</li>
+            <li>Ambulance: 911</li>
+          </ul>
+          <p>For other emergency numbers, please consult your local authorities.</p>
         </div>
       </div>
 
+      <div id="policeStationModal" class="modal">
+        <div class="modal-content">
+          <span id="close-police-station-modal" class="close">&times;</span>
+          <h2>Local Police Station</h2>
+          <p>Address: 203 Prospect Street</p>
+          <p>Contact Number: 10111091</p>
+          <p>Operating Hours: Sun - Mon 24H00</p>
+          <p>Services: Anything that threaten the safety and security of any community, <br> ensure offenders are brought to justice.</p>
+        </div>
+      </div>
+
+      <div id="neighbourhoodWatchModal" class="modal">
+        <div class="modal-content">
+          <span id="close-neigbourhood-watch" class="close">&times;</span>
+          <h2>Neighbourhood Watch Program</h2>
+          <p>Welcome to the Neighbourhood Watch Program!</p>
+          <p>Contact: [Insert contact information here]</p>
+          <p>Upcoming Events: [Insert upcoming events here]</p>
+          <p>Resources: [Insert resources or links here]</p>
+        </div>
+      </div>
+
+      <div id="crimePreventionModal" class="modal">
+        <div class="modal-content">
+          <span id="close-crime-prevention" class="close">&times;</span>
+          <h2>Crime Prevention Tips</h2>
+          <ul>
+            <li>Install security cameras</li>
+            <li>Keep doors and windows locked</li>
+            <li>Report suspicious activity</li>
+            <!-- Add more crime prevention tips here -->
+          </ul>
+          <p>For more information, visit our crime prevention resources page.</p>
+        </div>
+      </div>
+
+      <div id="securityChecklistModal" class="modal">
+  <div class="modal-content">
+    <span id="close-security-modal" class="close">&times;</span>
+    <h2>Home Security Checklist</h2>
+    <ul>
+      <li>Install deadbolt locks on all exterior doors</li>
+      <li>Trim shrubs and trees near windows</li>
+      <li>Install motion-sensor lights</li>
+      <!-- Add more items to the checklist here -->
+    </ul>
+    <p>Check off each item as you complete it!</p>
+  </div>
+</div>
+
+<div id="neighborhoodWatchModal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h2>Neighborhood Watch Signs</h2>
+    <img class="neighbourhood-watch-board" src="../images/Neighbourhood watch board.jpg" alt="">
+    <p>Neighborhood watch signs play a crucial role in promoting community safety and deterring criminal activity. These signs serve as visible reminders to residents and potential intruders that the community is actively engaged in crime prevention efforts.</p>
+    <p>The presence of neighborhood watch signs can:</p>
+    <ul>
+      <li>Deter criminal activity by signaling to potential intruders that the community is vigilant and actively watching for suspicious behavior.</li>
+      <li>Reassure residents that their neighborhood is committed to promoting safety and security, fostering a sense of community pride and cohesion.</li>
+      <li>Encourage residents to participate in neighborhood watch programs and report suspicious activities to local law enforcement.</li>
+    </ul>
+    <p>If you're interested in obtaining neighborhood watch signs for your community, please contact your local law enforcement agency or neighborhood watch coordinator for assistance.</p>
+  </div>
+</div>
+
     </div>
-    <script src="../scripts/home.js"></script>
+    <script src="../scripts/resources.js"></script>
   </body>
 </html>
