@@ -1,74 +1,75 @@
-import './index.css';
+// import 'index.css';
 
-// Retrieve tasks array from local storage, or initialize as empty array
-const localTodoTasksArray = JSON.parse(localStorage.getItem('task')) || [];
+// Get items from localstorage and parse them
+const localTodoTasksArray = JSON.parse(localStorage.getItem('localTodoTasks')) || [];
 const localTodosContainer = document.getElementById('local-storage-todos-container');
 const localInputEle = document.getElementById('local-storage-todo-input-ele');
 const localAddTaskBtn = document.getElementById('local-storage-add-task-btn');
 
-// Initialize session tasks array
-const sessionTodoTasksArray = [];
+// Get items from session and parse them (vanished items)
+const sessionTodoTasksArray = JSON.parse(sessionStorage.getItem('sessionTodoTasks')) || [];
 const sessionTodosContainer = document.getElementById('session-storage-todos-container');
 const sessionInputEle = document.getElementById('session-storage-todo-input-ele');
 const sessionAddTaskBtn = document.getElementById('session-storage-add-task-btn');
 
-// Function to create <li> elements for todo items
+// function to create to-do list
 function createTodoLiElements(todoArray, sectionType) {
-  // Return an array of <li> elements
-  // Example:
-  // [
-  //   <li>
-  //     <input type="checkbox" id="local-chbx-0" />
-  //     <label for="local-chbx-0">Dance</label>
-  //   </li>,
-  //   <li>
-  //     <input type="checkbox" id="local-chbx-1" />
-  //     <label for="local-chbx-1">Sing</label>
-  //   </li>
-  // ]
-  return todoArray.map((i, index) => {
-    // Create 3 elements:
+  return todoArray.map((todo, index) => { // Iterate through each item in the array & create list element for each
     const liElement = document.createElement('li');
     const checkboxEle = document.createElement('input');
     const labelEle = document.createElement('label');
 
-    // Add 2 attributes to the <input> element:
+    // Set attribute names
     checkboxEle.setAttribute('type', 'checkbox');
     checkboxEle.setAttribute('id', `${sectionType}-chbx-${index}`);
+    checkboxEle.checked = todo.checked;
 
-    // Add 1 attribute to the <label> element:
+	// Set attributes and text content for label element
     labelEle.setAttribute('for', `${sectionType}-chbx-${index}`);
+    labelEle.textContent = todo.text;
 
-    // Add a click event to the <input> element:
-    checkboxEle.addEventListener('click', (e) => {
-      todoArray[e.target.getAttribute('id').split('-')[2]].checked =
-        !todoArray[e.target.getAttribute('id').split('-')[2]].checked;
-      labelEle.classList.toggle('todo-task-done');
-    });
-
-    labelEle.textContent = i.text; // Add text to the <label> element
-    liElement.append(checkboxEle, labelEle); // Put <input> and <label> inside the <li>
+    liElement.append(checkboxEle, labelEle); // Combine checkbox element and the label
     return liElement;
   });
 }
 
-// Add a click event to the Local section's button:
+// function to store items in localStorage
+function updateLocalStorage() {
+  localStorage.setItem('localTodoTasks', JSON.stringify(localTodoTasksArray));
+}
+
+// function to store items in sessionStorage
+function updateSessionStorage() {
+  sessionStorage.setItem('sessionTodoTasks', JSON.stringify(sessionTodoTasksArray));
+}
+
+// Retrieve tasks from storage
+function loadTasksFromStorage() {
+  const localTodoLiElements = createTodoLiElements(localTodoTasksArray, 'local');
+  localTodosContainer.replaceChildren(...localTodoLiElements);
+
+  const sessionTodoLiElements = createTodoLiElements(sessionTodoTasksArray, 'session');
+  sessionTodosContainer.replaceChildren(...sessionTodoLiElements);
+}
+
+// Local storage button
 localAddTaskBtn.addEventListener('click', () => {
-  const newTodoInfo = { checked: false, text: localInputEle.value };
+  const newTodoInfo = { checked: false, text: localInputEle.value }; // Check if the item is checked or not
   localTodoTasksArray.push(newTodoInfo);
 
-  const todoLiElements = createTodoLiElements(localTodoTasksArray, 'local');
-  localTodosContainer.replaceChildren(...todoLiElements);
+  updateLocalStorage(); // Update localStorage
+  loadTasksFromStorage(); // Retrieve from localStorage
   localInputEle.value = '';
-  localStorage.setItem('task', JSON.stringify(localTodoTasksArray)); // Update local storage
 });
 
-// Add a click event to the Session section's button:
+// Session storage button
 sessionAddTaskBtn.addEventListener('click', () => {
   const newTodoInfo = { checked: false, text: sessionInputEle.value };
   sessionTodoTasksArray.push(newTodoInfo);
 
-  const todoLiElements = createTodoLiElements(sessionTodoTasksArray, 'session');
-  sessionTodosContainer.replaceChildren(...todoLiElements);
+  updateSessionStorage();
+  loadTasksFromStorage();
   sessionInputEle.value = '';
 });
+
+loadTasksFromStorage();

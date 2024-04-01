@@ -64,7 +64,7 @@ document.getElementById("incident-btn").addEventListener("click", function() {
   localStorage.setItem('reporter', reporter);
 
   const confirmationMessage = document.getElementById("confirmation-message");
-  confirmationMessage.innerHTML = `Your incident has been successfully reported`
+  confirmationMessage.innerHTML = `Your incident has been successfully reported. Please refresh your page to see your incident report`
   confirmationMessage.style.color = "green";
   confirmationMessage.style.marginTop = "1vw"
 });

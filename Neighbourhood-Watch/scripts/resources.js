@@ -1,3 +1,12 @@
+window.onload = function() {
+  // Retrieve the username from local storage
+  let storedUsername = localStorage.getItem('username');
+  
+  // If a username was stored, display it
+  if (storedUsername) {
+    document.getElementById("username-display").innerHTML = storedUsername;
+  }
+};
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
